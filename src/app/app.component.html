@@ -1,3 +1,18 @@
-<mat-card>
-  <mat-card-content>Simple card is here</mat-card-content>
-</mat-card>
+<app-header title="title of header here"></app-header>
+
+<!-- templete driven form -->
+<form *ngIf="formGroup" [formGroup]="formGroup">
+  <mat-form-field appearance="fill">
+    <mat-label>First name</mat-label>
+    <input formControlName="name" matInput placeholder="name">
+  </mat-form-field>
+  <br>
+  <mat-form-field appearance="fill">
+    <mat-label>Last name</mat-label>
+    <input formControlName="surname" matInput placeholder="surname">
+  </mat-form-field>
+  <br>
+  <button class="bg-sky-700 p-3" (click)="onFormSubmit()" type="submit"> submit </button>
+</form>
+
+<app-footer></app-footer>

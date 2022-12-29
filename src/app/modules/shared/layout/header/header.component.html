@@ -1,1 +1,22 @@
-<p>header works!</p>
+<p class="text-red-500">header works! yay</p>
+<br>
+<p>
+    {{ isoDate | date: 'dd MMM yyyy'}}
+</p>
+<br>
+<p>
+    {{capitalText | lowercase}}
+</p>
+<br>
+<p>
+    {{ amount | currency: 'EUR' }}
+</p>
+<br>
+<p>
+    {{ num | number}}
+</p>
+<br>
+<p>
+    <!-- custom pipe: pipe -->
+    {{birthday | birthday}}
+</p>
