@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Observable, of, Subscription } from 'rxjs';
 
 @Component({
@@ -23,7 +24,8 @@ export class HomeComponent {
 
 
   constructor(
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private router: Router
   ){
 
   }
@@ -56,6 +58,12 @@ export class HomeComponent {
       console.log(value);
     })
   }
+
+  goToProfileAndLogNothing(): void {
+    console.log("nothing");
+    this.router.navigate(['/profile']);
+  }
+
 
   // don't forget to unsubscribe!!!
   ngOnDestroy(): void {
