@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './modules/home/home.component';
 import { ProfileComponent } from './modules/profile/profile.component';
+import { ProductComponent } from './modules/product/product.component';
 
 const routes: Routes = [
   {
@@ -17,6 +18,10 @@ const routes: Routes = [
   {
     path: 'profile', 
     component: ProfileComponent
+  },
+  {
+    path: 'products',
+    component: ProductComponent
   }
 ]
 
